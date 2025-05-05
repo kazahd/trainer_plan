@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Тренировочный план</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="currentIndex">
+       <number>3</number>
+      </property>
+      <widget class="QWidget" name="mainMenuPage">
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>Тренировочный план</string>
+          </property>
+          <property name="textFormat">
+           <enum>Qt::TextFormat::AutoText</enum>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="createPlanButton">
+          <property name="text">
+           <string>Создать план тренировок</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="selectPlanButton">
+          <property name="text">
+           <string>Подобрать план тренировок</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="themeComboBox">
+          <property name="toolTip">
+           <string>Выбор темы</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="planSelectionPage">
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>Подбор плана тренировок</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QFormLayout" name="formLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>Цель тренировки:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="goalComboBox">
+            <item>
+             <property name="text">
+              <string>бодибилдинг</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>пауэрлифтинг</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>Уровень подготовки:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QComboBox" name="levelComboBox">
+            <item>
+             <property name="text">
+              <string>менее года</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>1-3 года</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>более 3 лет</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QPushButton" name="generatePlanButton">
+          <property name="text">
+           <string>Сгенерировать план</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="mainMenuButton">
+          <property name="text">
+           <string>Главное меню</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="planCreationPage">
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QLabel" name="label_5">
+          <property name="text">
+           <string>Создание плана тренировок</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QComboBox" name="dayComboBox"/>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="exerciseNameEdit">
+            <property name="placeholderText">
+             <string>Название упражнения</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="intensityComboBox">
+            <item>
+             <property name="text">
+              <string>легкая</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>средняя</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>тяжелая</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="setsRepsEdit">
+            <property name="placeholderText">
+             <string>Подходы х повторения</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="addExerciseButton">
+            <property name="text">
+             <string>Добавить</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="customPlanTable">
+          <property name="rowCount">
+           <number>0</number>
+          </property>
+          <property name="columnCount">
+           <number>4</number>
+          </property>
+          <attribute name="horizontalHeaderVisible">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="verticalHeaderVisible">
+           <bool>true</bool>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>День</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Упражнение</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Интенсивность</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Подходы х повторения</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="saveCustomPlanButton">
+          <property name="text">
+           <string>Сохранить план</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="mainMenuButton_2">
+          <property name="text">
+           <string>Главное меню</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="planViewPage">
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QLabel" name="label_6">
+          <property name="text">
+           <string>Ваш план тренировок</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="planTable">
+          <property name="rowCount">
+           <number>0</number>
+          </property>
+          <property name="columnCount">
+           <number>3</number>
+          </property>
+          <attribute name="horizontalHeaderVisible">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="verticalHeaderVisible">
+           <bool>true</bool>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>Упражнение</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Интенсивность</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Подходы х повторения</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="mainMenuButton_3">
+          <property name="text">
+           <string>Главное меню</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

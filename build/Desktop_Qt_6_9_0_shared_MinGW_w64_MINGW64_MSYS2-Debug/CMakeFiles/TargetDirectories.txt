@@ -1,0 +1,9 @@
+C:/msys64/mingw64/share/licenses/qt6-tools/project1/build/Desktop_Qt_6_9_0_shared_MinGW_w64_MINGW64_MSYS2-Debug/CMakeFiles/project1.dir
+C:/msys64/mingw64/share/licenses/qt6-tools/project1/build/Desktop_Qt_6_9_0_shared_MinGW_w64_MINGW64_MSYS2-Debug/CMakeFiles/edit_cache.dir
+C:/msys64/mingw64/share/licenses/qt6-tools/project1/build/Desktop_Qt_6_9_0_shared_MinGW_w64_MINGW64_MSYS2-Debug/CMakeFiles/rebuild_cache.dir
+C:/msys64/mingw64/share/licenses/qt6-tools/project1/build/Desktop_Qt_6_9_0_shared_MinGW_w64_MINGW64_MSYS2-Debug/CMakeFiles/list_install_components.dir
+C:/msys64/mingw64/share/licenses/qt6-tools/project1/build/Desktop_Qt_6_9_0_shared_MinGW_w64_MINGW64_MSYS2-Debug/CMakeFiles/install.dir
+C:/msys64/mingw64/share/licenses/qt6-tools/project1/build/Desktop_Qt_6_9_0_shared_MinGW_w64_MINGW64_MSYS2-Debug/CMakeFiles/install/local.dir
+C:/msys64/mingw64/share/licenses/qt6-tools/project1/build/Desktop_Qt_6_9_0_shared_MinGW_w64_MINGW64_MSYS2-Debug/CMakeFiles/install/strip.dir
+C:/msys64/mingw64/share/licenses/qt6-tools/project1/build/Desktop_Qt_6_9_0_shared_MinGW_w64_MINGW64_MSYS2-Debug/CMakeFiles/project1_autogen_timestamp_deps.dir
+C:/msys64/mingw64/share/licenses/qt6-tools/project1/build/Desktop_Qt_6_9_0_shared_MinGW_w64_MINGW64_MSYS2-Debug/CMakeFiles/project1_autogen.dir
