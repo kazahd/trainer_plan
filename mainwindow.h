@@ -5,6 +5,7 @@
 #include <QMap>
 #include <QVector>
 #include <QStringList>
+#include "nutritiondialog.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -44,6 +45,8 @@ private slots:
     void on_addExerciseButton_clicked();
     void on_saveCustomPlanButton_clicked();
     void on_themeComboBox_currentIndexChanged(int index);
+    void onCalculateNutritionClicked();
+    void on_calculateNutritionButton_clicked();
 
 private:
     // Вспомогательные методы
