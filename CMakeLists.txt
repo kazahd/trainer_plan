@@ -11,6 +11,11 @@ qt_add_executable(project1
     mainwindow.cpp
     mainwindow.h
     mainwindow.ui
+    nutritioncalculator.cpp
+    nutritioncalculator.h
+    nutritiondialog.cpp
+    nutritiondialog.h
+    nutritiondialog.ui
 )
 
 target_link_libraries(project1
