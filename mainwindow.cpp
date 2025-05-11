@@ -2,6 +2,9 @@
 #include "ui_mainwindow.h"
 #include <QMessageBox>
 #include <QHeaderView>
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
+#include "nutritiondialog.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -9,13 +12,14 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    // Инициализация компонентов приложения
+    // Подключаем кнопку КБЖУ
+    connect(ui->calculateNutritionButton, &QPushButton::clicked,
+            this, &MainWindow::on_calculateNutritionButton_clicked);
+
     setupFonts();
     setupStyles();
     setupUI();
-
     setupTrainingPlans();
-
     showMainMenu();
 }
 
@@ -558,4 +562,39 @@ void MainWindow::on_themeComboBox_currentIndexChanged(int index)
     }
 
     applyTheme(themeStyle);
+}
+
+void MainWindow::onCalculateNutritionClicked() {
+    NutritionDialog dialog(this);
+    if (dialog.exec() == QDialog::Accepted) {
+        auto results = dialog.getResults();
+        QMessageBox::information(this, "Результаты",
+                                 QString("Ваша норма:\n"
+                                         "Белки: %1 г\n"
+                                         "Жиры: %2 г\n"
+                                         "Углеводы: %3 г\n"
+                                         "Калории: %4 ккал")
+                                     .arg(results.protein, 0, 'f', 1)
+                                     .arg(results.fats, 0, 'f', 1)
+                                     .arg(results.carbs, 0, 'f', 1)
+                                     .arg(results.calories));
+    }
+}
+
+void MainWindow::on_calculateNutritionButton_clicked()
+{
+    NutritionDialog dialog(this);
+    if (dialog.exec() == QDialog::Accepted) {
+        auto results = dialog.getResults();
+        QMessageBox::information(this, "Результаты",
+                                 QString("Ваша норма:\n"
+                                         "Белки: %1 г\n"
+                                         "Жиры: %2 г\n"
+                                         "Углеводы: %3 г\n"
+                                         "Калории: %4 ккал")
+                                     .arg(results.protein, 0, 'f', 1)
+                                     .arg(results.fats, 0, 'f', 1)
+                                     .arg(results.carbs, 0, 'f', 1)
+                                     .arg(results.calories));
+    }
 }
