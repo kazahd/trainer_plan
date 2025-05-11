@@ -18,7 +18,7 @@
     <item>
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>3</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="mainMenuPage">
        <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -46,6 +46,13 @@
          <widget class="QPushButton" name="selectPlanButton">
           <property name="text">
            <string>Подобрать план тренировок</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="calculateNutritionButton">
+          <property name="text">
+           <string>Рассчитать норму КБЖУ</string>
           </property>
          </widget>
         </item>
